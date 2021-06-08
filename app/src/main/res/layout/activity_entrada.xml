@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".Activity_entrada">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/entradaLogo"
+            android:layout_width="@dimen/width_logo"
+            android:layout_height="@dimen/height_logo"
+            android:src="@drawable/imc_logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.10" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilRegisterPeso"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_default"
+            android:layout_marginTop="@dimen/margin_top_register_screen"
+            android:layout_marginEnd="@dimen/margin_default"
+            android:hint="@string/hint_your_Weight"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tilRegisterAltura"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/entradaLogo">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tieRegisterPeso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilRegisterAltura"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top_text_field_form"
+            android:hint="@string/hint_your_height"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/tilRegisterPeso"
+            app:layout_constraintStart_toStartOf="@id/tilRegisterPeso"
+            app:layout_constraintTop_toBottomOf="@+id/tilRegisterPeso">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tieRegisterAltura"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btCalcular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top_register_screen"
+            android:padding="@dimen/padding_default_button"
+            android:text="@string/button_calcular"
+            app:layout_constraintEnd_toEndOf="@+id/tilRegisterPeso"
+            app:layout_constraintStart_toStartOf="@id/tilRegisterPeso"
+            app:layout_constraintTop_toBottomOf="@+id/tilRegisterAltura" />
+
+        <Button
+            android:id="@+id/btSobre"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_default_button"
+            android:text="@string/Sobre_mim"
+            app:layout_constraintEnd_toEndOf="@+id/btCalcular"
+            app:layout_constraintStart_toStartOf="@+id/btCalcular"
+            app:layout_constraintTop_toBottomOf="@+id/btCalcular" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

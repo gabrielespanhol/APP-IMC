@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".Activity_mostra_dados">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/entradaLogo"
+            android:layout_width="@dimen/width_logo"
+            android:layout_height="@dimen/height_logo"
+            android:src="@drawable/imc_logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.1" />
+
+        <TextView
+            android:id="@+id/tilMostraPeso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="96dp"
+            android:text="@string/peso"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tilMostraAltura"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/entradaLogo"
+            />
+
+        <TextView
+            android:id="@+id/tilMostraAltura"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            android:text="@string/altura"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/tilMostraPeso"
+            app:layout_constraintStart_toStartOf="@id/tilMostraPeso"
+            app:layout_constraintTop_toBottomOf="@+id/tilMostraPeso" />
+
+        <TextView
+            android:id="@+id/tilMostraMostraIMC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:text="@string/imc"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/tilMostraAltura"
+            app:layout_constraintHorizontal_bias="0.518"
+            app:layout_constraintStart_toStartOf="@id/tilMostraAltura"
+            app:layout_constraintTop_toBottomOf="@+id/tilMostraAltura" />
+
+        <Button
+            android:id="@+id/bt_voltar"
+            android:layout_width="125dp"
+            android:layout_height="73dp"
+            android:layout_marginTop="60dp"
+            android:padding="@dimen/padding_default_button"
+            android:text="@string/button_voltar"
+            app:layout_constraintEnd_toEndOf="@+id/tilMostraMostraIMC"
+            app:layout_constraintStart_toStartOf="@+id/tilMostraMostraIMC"
+            app:layout_constraintTop_toBottomOf="@+id/tilMostraMostraIMC" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
